@@ -19,5 +19,29 @@
         <servlet-name>CreateCode</servlet-name>
         <url-pattern>/CreateCode</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>MemberManagerCl</servlet-name>
+        <servlet-class>com.nxp.controller.MemberManagerCl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MemberManagerCl</servlet-name>
+        <url-pattern>/MemberManagerCl</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>gotoAddMember</servlet-name>
+        <servlet-class>com.nxp.controller.gotoAddMember</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gotoAddMember</servlet-name>
+        <url-pattern>/gotoAddMember</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddMemberCl</servlet-name>
+        <servlet-class>com.nxp.controller.AddMemberCl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddMemberCl</servlet-name>
+        <url-pattern>/AddMemberCl</url-pattern>
+    </servlet-mapping>
 
 </web-app>

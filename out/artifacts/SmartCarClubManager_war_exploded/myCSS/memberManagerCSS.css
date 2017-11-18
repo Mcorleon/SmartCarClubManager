@@ -36,7 +36,7 @@
 .a1{
     position: absolute;
     margin-top: 600px;
-    margin-left: 420px;
+    margin-left: 450px;
     display: block;
     width: 75px;
     height: 25px;
@@ -48,7 +48,7 @@
 .a2{
     position: absolute;
     margin-top: 600px;
-    margin-left: 650px;
+    margin-left: 680px;
     display: block;
     width: 75px;
     height: 25px;
@@ -60,5 +60,35 @@
 .span1{
     position: absolute;
     margin-top: 600px;
-    margin-left: 558px;
+    margin-left: 588px;
+}
+.a3{
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 200px;
+    display: block;
+    width: 75px;
+    height: 25px;
+    background-color:cornflowerblue;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.a1:hover{
+    background-color: royalblue;
+}
+.a2:hover{
+    background-color: royalblue;
+}
+.a3:hover{
+    background-color: royalblue;
+}
+.a1:active {
+    transform: translateY(1px);
+}
+.a2:active {
+    transform: translateY(1px);
+}
+.a3:active {
+    transform: translateY(1px);
 }

@@ -1,0 +1,82 @@
+.div{
+    position: absolute;
+    margin-left: 400px;
+    margin-top: 170px;
+    font-weight: bold;
+    border: 1px;
+    font-size: 18px;
+    background-color: white;
+    width: 600px;
+    height: 400px;
+}
+
+.name{
+    width: 250px;
+    height: 30px;
+    font-size: large;
+    border-color: royalblue;
+}
+.major{
+    width: 250px;
+    height: 30px;
+    font-size: large;
+    border-color: royalblue;
+}
+.phoneNumber{
+    width: 250px;
+    height: 30px;
+    font-size: large;
+    border-color: royalblue;
+}
+.a{
+    position: absolute;
+    margin-left: 230px;
+    line-height: 25px;
+    text-decoration: none;
+    text-align: center;
+    background-color: cornflowerblue;
+    color: white;
+    width: 70px;
+    height: 25px;
+    font-size: 14px;
+
+}
+.a:hover{
+    background-color: royalblue;
+    cursor: hand;
+}
+.a:active {
+    transform: translateY(1px);
+}
+.submit{
+    position: absolute;
+    margin-left: 50px;
+    border: none;
+    width: 70px;
+    height: 25px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.submit:hover{
+    background-color: royalblue;
+    cursor: hand;
+}
+.submit:active {
+    transform: translateY(1px);
+}
+.position{
+    width: 250px;
+    height: 30px;
+    font-size: large;
+    border-color: royalblue;
+}
+.span{
+    position: absolute;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 510px;
+    margin-top: 100px;
+    color: cornflowerblue;
+}

@@ -10,24 +10,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+<title>Title</title>
     <link rel="stylesheet" type="text/css" href="myCSS/memberManagerCSS.css">
 </head>
 <%
-    int pageNow = 1;//当前页数
-    int pageSize = 10;//每页显示条数
-    int pageCount = 0;//总共多少页
-    int rowCount = 0;//数据总条数
-    MembersService membersService=new MembersService();
-    if (!request.getParameter("pageNow").equals("1")) {
-        //不是第一页就取通过点击传递的页数
-        pageNow = Integer.parseInt(request.getParameter("pageNow"));
-    }
-    rowCount=membersService.getRowCount();
-    pageCount = rowCount % pageSize == 0 ? rowCount / pageSize : rowCount / pageSize + 1;
-    ArrayList<Members> arrayList=membersService.getMemberMes(pageNow,pageSize);
+ArrayList<Members> arrayList=(ArrayList<Members>) request.getAttribute("al");
+String pageNow= request.getAttribute("pageNow").toString();
+String pageCount= request.getAttribute("pageCount").toString();
+String lastPage= request.getAttribute("lastPage").toString();
+String nextPage= request.getAttribute("nextPage").toString();
 %>
-<body>
+<a class="a3" href="/gotoAddMember">添加成员</a>
 <table class="table">
     <tr><th>序号</th><th>姓名</th><th>性别</th><th>年级</th><th>专业</th><th>手机号码</th><th>职务</th></tr>
 
@@ -45,14 +38,9 @@
 
 
 </table>
-<%
-    int lastPage=pageNow-1;
-    int nextPage=pageNow+1;
-    if(lastPage<1)lastPage=1;
-    if (nextPage>pageCount)nextPage=pageCount;
-%>
-<a class="a1" href="<%="gotoMemberManager.jsp?pageNow="+lastPage%>">上一页</a>
-<a class="a2" href="<%="gotoMemberManager.jsp?pageNow="+nextPage%>">下一页</a>
+
+<a class="a1" href="<%="/MemberManagerCl?pageNow="+lastPage%>">上一页</a>
+<a class="a2" href="<%="/MemberManagerCl?pageNow="+nextPage%>">下一页</a>
 <span class="span1"><%=pageNow%>/<%=pageCount%></span>
 </body>
 </html>

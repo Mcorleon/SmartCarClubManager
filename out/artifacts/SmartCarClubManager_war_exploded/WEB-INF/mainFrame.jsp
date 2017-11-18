@@ -13,7 +13,7 @@
     <script language="JavaScript">
         function changeURL(num) {
             if(num==1){
-                document.getElementById("iframe").setAttribute("src","gotoMemberManager.jsp")
+                document.getElementById("iframe").setAttribute("src","/MemberManagerCl?pageNow=1")
             }else if(num==2){
                 document.getElementById("iframe").setAttribute("src","test.html")
             }
@@ -50,6 +50,6 @@
     <li><a href="#" onclick="changeURL(4)" id="a4">器材管理</a></li>
     <li><a href="#" onclick="changeURL(5)" id="a5">其他</a></li>
 </ul>
-<iframe class="iframe" id="iframe" src="gotoMemberManager.jsp"></iframe>
+<iframe class="iframe" id="iframe" src="/MemberManagerCl?pageNow=1"></iframe>
 </body>
 </html>
