@@ -28,12 +28,12 @@
         <url-pattern>/MemberManagerCl</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>gotoAddMember</servlet-name>
-        <servlet-class>com.nxp.controller.gotoAddMember</servlet-class>
+        <servlet-name>GotoAddMember</servlet-name>
+        <servlet-class>com.nxp.controller.GotoAddMember</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>gotoAddMember</servlet-name>
-        <url-pattern>/gotoAddMember</url-pattern>
+        <servlet-name>GotoAddMember</servlet-name>
+        <url-pattern>/GotoAddMember</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>AddMemberCl</servlet-name>
@@ -42,6 +42,22 @@
     <servlet-mapping>
         <servlet-name>AddMemberCl</servlet-name>
         <url-pattern>/AddMemberCl</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteMemberCl</servlet-name>
+        <servlet-class>com.nxp.controller.DeleteMemberCl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteMemberCl</servlet-name>
+        <url-pattern>/DeleteMemberCl</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SerchMemberCl</servlet-name>
+        <servlet-class>com.nxp.controller.SerchMemberCl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SerchMemberCl</servlet-name>
+        <url-pattern>/SerchMemberCl</url-pattern>
     </servlet-mapping>
 
 </web-app>

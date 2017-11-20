@@ -1,7 +1,7 @@
 
 .table{
     position: absolute;
-    margin-left: 200px;
+    margin-left: 130px;
     margin-top: 100px;
     font-size:15px;
     color:#333333;
@@ -65,7 +65,7 @@
 .a3{
     position: absolute;
     margin-top: 60px;
-    margin-left: 200px;
+    margin-left: 130px;
     display: block;
     width: 75px;
     height: 25px;
@@ -91,4 +91,38 @@
 }
 .a3:active {
     transform: translateY(1px);
+}
+.a4{
+    font-size: small;
+    color: blue;
+    text-decoration: none;
+}
+.a4:active{
+    color: blue;
+    transform:translateY(1px);
+}
+.form{
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 250px;
+}
+.submit{
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+    width: 65px;
+    height: 25px;
+    font-size: 15px;
+}
+.submit:hover{
+    background-color: royalblue;
+    cursor: hand;
+}
+.submit:active{
+    transform:translateY(1px);
+}
+.text{
+    height: 25px;
+    width: 180px;
+    font-size: 15px;
 }

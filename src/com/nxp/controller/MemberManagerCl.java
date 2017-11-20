@@ -27,7 +27,7 @@ public class MemberManagerCl extends HttpServlet {
             //不是第一页就取通过点击传递的页数
             pageNow = Integer.parseInt(request.getParameter("pageNow"));
         }
-        rowCount=membersService.getRowCount();
+        rowCount=membersService.getRowCount("SELECT count(*) FROM member_info");
         pageCount = rowCount % pageSize == 0 ? rowCount / pageSize : rowCount / pageSize + 1;
         ArrayList<Members> arrayList=membersService.getMemberMes(pageNow,pageSize);
         int lastPage=pageNow-1;
@@ -39,6 +39,7 @@ public class MemberManagerCl extends HttpServlet {
         request.setAttribute("pageCount",pageCount);
         request.setAttribute("lastPage",lastPage);
         request.setAttribute("nextPage",nextPage);
+        request.setAttribute("sucessTip",request.getParameter("sucessTip"));
         request.getRequestDispatcher("/WEB-INF/memberManager.jsp").forward(request,response);
     }
 }

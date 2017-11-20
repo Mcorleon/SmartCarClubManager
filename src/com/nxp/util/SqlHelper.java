@@ -100,6 +100,23 @@ public class SqlHelper {
         }
         return rs;
     }
+    public static void execute(String sql, String[] parameters) {
+        try {
+            ct = getConnection();
+            ps = ct.prepareStatement(sql);
+            if (parameters != null) {
+                for (int i = 0; i < parameters.length; i++) {
+                    ps.setString(i + 1, parameters[i]);
+                }
+            }
+            ps.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
+        } finally {
+            close(SqlHelper.getRs(),SqlHelper.getPs(),SqlHelper.getCt());
+        }
+    }
 
     public static Connection getCt() {
         return ct;

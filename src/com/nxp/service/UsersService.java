@@ -25,6 +25,11 @@ public class UsersService {
             e.printStackTrace();
         } finally {
             SqlHelper.close(SqlHelper.getRs(), SqlHelper.getPs(), SqlHelper.getCt());
+            try {
+                rs.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
 
         }
 

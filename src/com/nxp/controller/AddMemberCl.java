@@ -1,5 +1,7 @@
 package com.nxp.controller;
 
+import com.nxp.service.MembersService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,6 +28,7 @@ public class AddMemberCl extends HttpServlet {
         String major=request.getParameter("major");
         String position=request.getParameter("position");
         String phoneNumber=request.getParameter("phoneNumber");
+        String pageCount=request.getParameter("pageCount");
         //检查输入是否有错
         if(name==null||name.trim().equals("")){
             request.setAttribute("nameErr","nullErr");
@@ -56,6 +59,18 @@ public class AddMemberCl extends HttpServlet {
         }
         else if(phoneNumberMatch==false){
             request.setAttribute("phoneNumberErr","formatErr");
+        }
+       // 有输入错误返回到表单页面重填，没有则insert完成后返回到表格
+        if(request.getAttribute("nameErr")!=null||request.getAttribute("sexErr")!=null||
+        request.getAttribute("gradeErr")!=null||request.getAttribute("majorErr")!=null||
+        request.getAttribute("positionErr")!=null||request.getAttribute("phoneNumberErr")!=null){
+            request.getRequestDispatcher("/GotoAddMember").forward(request,response);
+        }
+        else {
+            String[] parameters={name,sex,grade,major,phoneNumber,position};
+            MembersService membersService=new MembersService();
+            membersService.addMember(parameters);
+            request.getRequestDispatcher("/MemberManagerCl?pageNow="+pageCount+"&sucessTip=1").forward(request,response);
         }
 
     }

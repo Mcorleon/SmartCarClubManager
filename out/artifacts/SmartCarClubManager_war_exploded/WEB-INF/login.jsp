@@ -23,7 +23,7 @@
 <body>
 <h1 class="head">南昌大学智能车基地管理系统</h1>
 <span class="span">Designed by Mcorleon</span>
-<img src="/img/logo-2.png" class="logo" />
+<img src="${pageContext.servletContext.contextPath}/img/logo-2.png" class="logo" />
 <div class="div">
     <form action="/LoginCl" method="post">
         用户名　<input  class="input" type="text" name="userName"><br><br>
